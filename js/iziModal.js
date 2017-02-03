@@ -84,6 +84,10 @@ if (typeof jQuery === "undefined") {
 				this.$element.addClass('iziModal');
 			}
 
+			if (this.options.mobileDetection === false){
+				isMobile = false;
+			}
+
             if(this.group.name === undefined && options.group !== ""){
             	this.group.name = options.group;
             	this.$element.attr('data-'+PLUGIN_NAME+'-group', options.group);
@@ -1109,6 +1113,7 @@ if (typeof jQuery === "undefined") {
 	    restoreDefaultContent: false,
 	    autoOpen: 0, // Boolean, Number
 	    bodyOverflow: false,
+	    mobileDetection: false,
 	    fullscreen: false,
 	    openFullscreen: false,
 	    closeOnEscape: true,
