@@ -84,7 +84,7 @@ if (typeof jQuery === "undefined") {
 				this.$element.addClass('iziModal');
 			}
 
-			this.$element.addClass(this.$element.data(PLUGIN_NAME+'-class'));
+			this.$element.addClass(this.$element.attr('data-'+PLUGIN_NAME+'-class'));
 
 			if (this.options.mobileDetection === false){
 				isMobile = false;
@@ -606,7 +606,7 @@ if (typeof jQuery === "undefined") {
 
 				if (transitionOut !== '') {
 					var theme = this.options.theme == 'light' ? PLUGIN_NAME+'-light' : this.options.theme;
-	                this.$element.attr('class', PLUGIN_NAME + " transitionOut " + transitionOut + " " + theme + " " + String((this.isFullscreen === true) ? 'isFullscreen' : '') + " " + String(this.$element.hasClass('isAttached') ? "isAttached" : "") + " " + String((this.options.attached === 'top') ? 'isAttachedTop' : '') + " " + String((this.options.attached === 'bottom') ? 'isAttachedBottom' : '') + " " + String(this.$element.data(PLUGIN_NAME+'-class')) + (this.options.rtl ? PLUGIN_NAME+'-rtl' : ''));
+	                this.$element.attr('class', PLUGIN_NAME + " transitionOut " + transitionOut + " " + theme + " " + String((this.isFullscreen === true) ? 'isFullscreen' : '') + " " + String(this.$element.hasClass('isAttached') ? "isAttached" : "") + " " + String((this.options.attached === 'top') ? 'isAttachedTop' : '') + " " + String((this.options.attached === 'bottom') ? 'isAttachedBottom' : '') + " " + String(this.$element.attr('data-'+PLUGIN_NAME+'-class')) + (this.options.rtl ? PLUGIN_NAME+'-rtl' : ''));
 					this.$overlay.attr('class', PLUGIN_NAME + "-overlay " + this.options.transitionOutOverlay);
 					this.$navigate.attr('class', PLUGIN_NAME + "-navigate " + this.options.transitionOutOverlay);
 
