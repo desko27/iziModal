@@ -327,14 +327,14 @@
 
 
 html.iziModal-isOverflow{
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 html.iziModal-isOverflow body, html.iziModal-isAttached body{
     overflow-y: scroll;
     position: relative;
 }
 html.iziModal-isAttached{
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .iziModal.isAttached{
     border-radius: 0 !important;
